@@ -1,0 +1,19 @@
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+div.sphinxsidebarwrapper p.logo {
+	text-align: left;
+}
+
+img.align-bottom {
+	vertical-align : bottom;
+}

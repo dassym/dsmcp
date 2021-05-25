@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BasicWindow</class>
+ <widget class="QMainWindow" name="BasicWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>354</width>
+    <height>456</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DSMCP</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="2">
+     <widget class="QSvgPanel" name="graphicsViewPanel"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QActionButton" name="pushButtonStart">
+      <property name="text">
+       <string>Start</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QActionButton" name="pushButtonStop">
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QSpeed" name="widgetSpeed">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="2">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>354</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSystem">
+    <property name="title">
+     <string>System</string>
+    </property>
+    <addaction name="actionRefresh"/>
+    <addaction name="actionAutoRefresh"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuMotor">
+    <property name="title">
+     <string>Motor</string>
+    </property>
+    <addaction name="actionMotorMode"/>
+    <addaction name="actionMotorStart"/>
+    <addaction name="actionMotorStop"/>
+    <addaction name="actionLightEnabled"/>
+    <addaction name="actionLightBlue"/>
+    <addaction name="actionMotorCCW"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuWorkspace">
+    <property name="title">
+     <string>Workspace</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuBoard">
+    <property name="title">
+     <string>Board</string>
+    </property>
+    <addaction name="actionFirmReset"/>
+    <addaction name="actionAPISendFirmware"/>
+    <addaction name="actionAboutBoard"/>
+   </widget>
+   <addaction name="menuSystem"/>
+   <addaction name="menuBoard"/>
+   <addaction name="menuWorkspace"/>
+   <addaction name="menuMotor"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSysConnect">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/link.svg</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+   <property name="toolTip">
+    <string>Connect DCP to board</string>
+   </property>
+  </action>
+  <action name="actionMotorStart">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/start.svg</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+   <property name="toolTip">
+    <string>Start the motor</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+  </action>
+  <action name="actionLightEnabled">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/light.svg</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Light Enabled</string>
+   </property>
+   <property name="toolTip">
+    <string>Enable/disable Light</string>
+   </property>
+   <property name="shortcut">
+    <string>F4</string>
+   </property>
+  </action>
+  <action name="actionLightBlue">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/light-blue.svg</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>BlueLight</string>
+   </property>
+   <property name="toolTip">
+    <string>Switch white / blue light</string>
+   </property>
+   <property name="shortcut">
+    <string>F9</string>
+   </property>
+  </action>
+  <action name="actionMotorCCW">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/counterclockwise.svg</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>CCW</string>
+   </property>
+   <property name="toolTip">
+    <string>Set rotation to counter clockwise direction</string>
+   </property>
+   <property name="shortcut">
+    <string>F7</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F1</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAutoRefresh">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/autorefresh.svg</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>AutoRefresh</string>
+   </property>
+  </action>
+  <action name="actionSysDisconnect">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/unlink.svg</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Disconnect</string>
+   </property>
+   <property name="toolTip">
+    <string>Disconnect DCP from board</string>
+   </property>
+  </action>
+  <action name="actionRefresh">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/refresh.svg</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+   <property name="toolTip">
+    <string>Refresh</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/help.svg</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionMotorCW">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/clockwise.svg</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>CW</string>
+   </property>
+   <property name="toolTip">
+    <string>Set rotation to clockwise direction</string>
+   </property>
+   <property name="shortcut">
+    <string>F6</string>
+   </property>
+  </action>
+  <action name="actionMotorStop">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/stop.svg</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop the motor</string>
+   </property>
+   <property name="shortcut">
+    <string>F3</string>
+   </property>
+  </action>
+  <action name="actionFirmReset">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="actionAPISendFirmware">
+   <property name="text">
+    <string>Send Firmware</string>
+   </property>
+  </action>
+  <action name="actionAboutBoard">
+   <property name="text">
+    <string>About board...</string>
+   </property>
+  </action>
+  <action name="actionMotorMode">
+   <property name="text">
+    <string>Motor mode...</string>
+   </property>
+   <property name="toolTip">
+    <string>Show motor mode dialog</string>
+   </property>
+   <property name="shortcut">
+    <string>F10</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QSvgPanel</class>
+   <extends>QGraphicsView</extends>
+   <header>app.gui.widget.qsvgpanel</header>
+  </customwidget>
+  <customwidget>
+   <class>QActionButton</class>
+   <extends>QPushButton</extends>
+   <header>app.gui.widget.qactionbutton</header>
+  </customwidget>
+  <customwidget>
+   <class>QSpeed</class>
+   <extends>QFrame</extends>
+   <header>app.gui.widget.qspeed</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>BasicWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
