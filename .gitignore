@@ -1,0 +1,10 @@
+__pycache__
+*.pyc
+*~
+*.aux
+*.log
+*.pdf
+/out
+/arch
+/_trash_
+**/build
