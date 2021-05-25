@@ -1,0 +1,2 @@
+include src/dsmcp/img/*
+include src/dsmscp/app/gui/res/img/*
