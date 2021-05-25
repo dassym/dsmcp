@@ -1,0 +1,3 @@
+include src/dsmcp/img/*
+include src/dsmscp/app/gui/res/img/*
+include src/dsmscp/app/i18n/res_i18n.py
