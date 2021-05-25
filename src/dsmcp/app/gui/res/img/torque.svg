@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64"
+   height="64"
+   id="svg3586"
+   version="1.1"
+   inkscape:version="0.92.5 (0.92.5+68)"
+   sodipodi:docname="torque.svg"
+   viewBox="0 0 59.999998 60.000002">
+  <defs
+     id="defs3588" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.8242188"
+     inkscape:cx="-0.92945122"
+     inkscape:cy="-12.403653"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="mm"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1853"
+     inkscape:window-height="1172"
+     inkscape:window-x="1987"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3591">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-337.90576,-757.3126)">
+    <g
+       id="g3745"
+       transform="matrix(1.7493135,0,0,1.7493135,-248.16437,-603.17331)"
+       style="stroke:#000000">
+      <g
+         transform="matrix(0.00900061,0,0,0.00900061,-188.18269,499.01614)"
+         id="g18451"
+         style="display:inline;stroke:#000000">
+        <g
+           style="display:inline;stroke:#000000"
+           transform="matrix(0.85714237,0,0,0.85714237,17181.095,21061.467)"
+           id="g18333">
+          <circle
+             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.0669291;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+             id="path18335"
+             transform="matrix(111.10364,0,0,111.10364,0,-0.80305274)"
+             cx="442.91339"
+             cy="124.01574"
+             r="10.629921" />
+          <path
+             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:2.0669291;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+             d="m 442.91339,124.01574 h 24.80315"
+             id="path18337"
+             inkscape:connector-curvature="0"
+             transform="matrix(111.10364,0,0,111.10364,0,-0.80305274)" />
+          <path
+             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;stroke:#000000;stroke-width:229.64334106;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+             d="m 51571.335,13777.797 -393.674,-1181.023 h 787.349 z"
+             id="path18339"
+             inkscape:connector-curvature="0" />
+          <path
+             sodipodi:nodetypes="sssss"
+             inkscape:connector-curvature="0"
+             id="path18341"
+             d="m 49208.497,13286.498 c -270.61,0 -493.023,222.413 -493.023,493.022 0,270.61 222.413,489.551 493.023,489.551 270.609,0 493.022,-218.941 493.022,-489.551 0,-270.609 -222.413,-493.022 -493.022,-493.022 z"
+             style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:Sans;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.77165353;marker:none;enable-background:accumulate" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
