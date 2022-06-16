@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dac>
+	<signal id="DPA_VIRT">
+		<descr>Virtual DPA</descr>
+		<descr lang="fr">DPA virtuelle</descr>
+	</signal>
+	<signal id="DPA_REAL">
+		<descr>Real DPA</descr>
+		<descr lang="fr">DPA réelle</descr>
+	</signal>
+	<signal id="PHI">
+		<descr>Phase shift between DPA's</descr>
+		<descr lang="fr">Décalage de phase entre DPA</descr>
+	</signal>
+	<signal id="DRAG">
+		<descr>Absolute drag error</descr>
+		<descr lang="fr">Erreur de poursuite absolue</descr>
+	</signal>
+	<!-- 
+	<signal id="BRIDGES_ZONE">
+		<descr>Bridges zone</descr>
+		<descr lang="fr">Zone des ponts</descr>
+	</signal>
+	<signal id="EMF_ZONE">
+		<descr>EMF zone</descr>
+		<descr lang="fr">Zone EMF</descr>
+	</signal>
+	<signal id="EMF_1">
+		<descr>EMF #1 plain value</descr>
+	</signal>
+	<signal id="EMF_2">
+		<descr>EMF #2 plain value</descr>
+	</signal>
+	<signal id="EMF_3">
+		<descr>EMF #3 plain value</descr>
+	</signal>
+	<signal id="EMF_SUM">
+		<descr>Current EMF value</descr>
+		<descr lang="fr">Valeur EMF actuelle</descr>
+	</signal>
+	-->
+	<signal id="PWM_OPENING">
+		<descr>PWM opening</descr>
+		<descr lang="fr">Ouverture PWM</descr>
+	</signal>
+	<signal id="IDRV_INST">
+		<descr>Instantaneous driver current</descr>
+		<descr lang="fr">Courant DRIVER instantané</descr>
+	</signal>
+	<signal id="IDRV_AVG64">
+		<descr>Current average over 64 measures</descr>
+		<descr lang="fr">Courant moyen sur 64 mesures</descr>
+	</signal>
+	<signal id="UDRV_INST">
+		<descr>Instantaneous driver voltage</descr>
+		<descr lang="fr">Tension DRIVER instantanée</descr>
+	</signal>
+	<signal id="UDRV_AVG64">
+		<descr>Voltage average over 64 measures</descr>
+		<descr lang="fr">Tension moyenne sur 64 mesures</descr>
+	</signal>
+	<signal id="LIGHT_CU">
+		<descr>Instantaneous light current</descr>
+	</signal>
+	<signal id="DEBUG_0">
+		<descr>Debug value #0</descr>
+	</signal>
+	<signal id="DEBUG_1">
+		<descr>Debug value #1</descr>
+	</signal>
+	<signal id="DEBUG_2">
+		<descr>Debug value #2</descr>
+	</signal>
+	<signal id="DEBUG_3">
+		<descr>Debug value #3</descr>
+	</signal>
+	
+</dac>
