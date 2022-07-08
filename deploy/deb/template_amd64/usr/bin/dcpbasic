@@ -1,0 +1,5 @@
+#!/bin/sh
+APPDIR=/opt/dassym/dsmcp
+APPOPT=-c dsmcp.ini
+
+python3 $APPDIR/dcpbasic.py $APPOPT "$@"

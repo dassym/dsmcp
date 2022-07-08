@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Dcpdev
+Exec=dcpdev -S
+Icon=dassym.png
+Terminal=true
+StartupNotify=true

@@ -1,0 +1,3 @@
+PyDapi2
+lxml
+pyserial
