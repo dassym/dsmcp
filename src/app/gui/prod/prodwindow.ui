@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProdWindow</class>
+ <widget class="QMainWindow" name="ProdWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>634</width>
+    <height>466</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DsmCP - Production</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QGroupBox" name="groupBoxProgramming">
+      <property name="title">
+       <string>Programming</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="1" column="1">
+        <widget class="QLabel" name="labelPrgBoardImage">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>labelPrgBoardImage</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="3">
+        <widget class="QProgressBar" name="progressBarPrg">
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="labelPrgBoard">
+         <property name="text">
+          <string>labelPrgBoard</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelPrgCustomerImage">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>labelPrgCustomerImage</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="labelPrgFirmware">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>labelPrgFirmware</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3" rowspan="6">
+        <widget class="QFrame" name="frame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QActionButton" name="pushButtonWriteFirmware">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string>Write firmware in the board</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/img/128/upload-firmware.png</normalon>
+             </iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>64</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QActionButton" name="pushButtonFirmReset">
+            <property name="text">
+             <string>RESET</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/img/32/memory-factory-reset.png</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="labelPrgFirmwareDesc">
+         <property name="text">
+          <string>labelPrgFirmwareDesc</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelPrgCustomer">
+         <property name="text">
+          <string>labelPrgCustomer</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="3">
+        <widget class="QLabel" name="labelPrgData">
+         <property name="toolTip">
+          <string>Manufacturing data</string>
+         </property>
+         <property name="text">
+          <string>labelPrgData</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0" colspan="4">
+        <widget class="QGroupBox" name="groupBoxPrgIdentification">
+         <property name="title">
+          <string>Identification</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QSpeed" name="widgetSpeed">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTorque" name="widgetTorque">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QError" name="frameError">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>634</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSystem">
+    <property name="title">
+     <string>System</string>
+    </property>
+    <addaction name="actionLink"/>
+    <addaction name="actionConnect"/>
+    <addaction name="actionRefresh"/>
+    <addaction name="actionAutoRefresh"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuMotor">
+    <property name="title">
+     <string>Motor</string>
+    </property>
+    <addaction name="actionMotorMode"/>
+    <addaction name="actionMotorStart"/>
+    <addaction name="actionMotorStop"/>
+    <addaction name="actionLightEnabled"/>
+    <addaction name="actionLightBlue"/>
+    <addaction name="actionMotorReverse"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout"/>
+    <addaction name="actionRegistersView"/>
+   </widget>
+   <widget class="QMenu" name="menuWorkspace">
+    <property name="title">
+     <string>Workspace</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuBoard">
+    <property name="title">
+     <string>Board</string>
+    </property>
+    <addaction name="actionFirmReset"/>
+    <addaction name="actionWriteFirmware"/>
+    <addaction name="actionAboutBoard"/>
+    <addaction name="actionReset"/>
+   </widget>
+   <widget class="QMenu" name="menuMemory">
+    <property name="title">
+     <string>Memory</string>
+    </property>
+    <addaction name="actionStore"/>
+   </widget>
+   <addaction name="menuSystem"/>
+   <addaction name="menuBoard"/>
+   <addaction name="menuWorkspace"/>
+   <addaction name="menuMotor"/>
+   <addaction name="menuMemory"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionLink"/>
+   <addaction name="actionAutoRefresh"/>
+   <addaction name="actionRefresh"/>
+   <addaction name="actionConnect"/>
+   <addaction name="separator"/>
+   <addaction name="actionMotorStart"/>
+   <addaction name="actionMotorStop"/>
+   <addaction name="actionMotorReverse"/>
+   <addaction name="actionLightEnabled"/>
+   <addaction name="actionLightBlue"/>
+   <addaction name="separator"/>
+   <addaction name="actionMotorMode"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="actionLink">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/img.qrc">
+     <normaloff>:/img/32/unlink.png</normaloff>
+     <normalon>:/img/32/link.png</normalon>
+     <activeoff>:/img/32/link.png</activeoff>
+     <activeon>:/img/32/unlink.png</activeon>:/img/32/unlink.png</iconset>
+   </property>
+   <property name="text">
+    <string>Link</string>
+   </property>
+   <property name="toolTip">
+    <string>Link DCP to board</string>
+   </property>
+  </action>
+  <action name="actionMotorStart">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/32/start.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+   <property name="toolTip">
+    <string>Start the motor</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+  </action>
+  <action name="actionLightEnabled">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/img.qrc">
+     <normaloff>:/img/32/light-off.png</normaloff>
+     <normalon>:/img/32/light-on.png</normalon>
+     <activeoff>:/img/32/light-on.png</activeoff>
+     <activeon>:/img/32/light-off.png</activeon>:/img/32/light-off.png</iconset>
+   </property>
+   <property name="text">
+    <string>Light Enabled</string>
+   </property>
+   <property name="toolTip">
+    <string>Enable/disable Light</string>
+   </property>
+   <property name="shortcut">
+    <string>F4</string>
+   </property>
+  </action>
+  <action name="actionLightBlue">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/img.qrc">
+     <normaloff>:/img/32/light.png</normaloff>
+     <normalon>:/img/32/light-blue.png</normalon>
+     <activeoff>:/img/32/light-blue.png</activeoff>
+     <activeon>:/img/32/light.png</activeon>:/img/32/light.png</iconset>
+   </property>
+   <property name="text">
+    <string>BlueLight</string>
+   </property>
+   <property name="toolTip">
+    <string>Switch white / blue light</string>
+   </property>
+   <property name="shortcut">
+    <string>F9</string>
+   </property>
+  </action>
+  <action name="actionMotorReverse">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/img.qrc">
+     <normaloff>:/img/32/clockwise.png</normaloff>
+     <normalon>:/img/32/counterclockwise.png</normalon>
+     <activeoff>:/img/32/counterclockwise.png</activeoff>
+     <activeon>:/img/32/clockwise.png</activeon>:/img/32/clockwise.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reverse</string>
+   </property>
+   <property name="toolTip">
+    <string>Reverses the motor rotation direction</string>
+   </property>
+   <property name="shortcut">
+    <string>F7</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F1</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAutoRefresh">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/32/autorefresh.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>AutoRefresh</string>
+   </property>
+  </action>
+  <action name="actionUnlink">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/32/unlink.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Unlink</string>
+   </property>
+   <property name="toolTip">
+    <string>Unlink DCP from board</string>
+   </property>
+  </action>
+  <action name="actionRefresh">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/32/refresh.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+   <property name="toolTip">
+    <string>Refresh</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/32/help.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionMotorStop">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/32/stop.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop the motor</string>
+   </property>
+   <property name="shortcut">
+    <string>F3</string>
+   </property>
+  </action>
+  <action name="actionFirmReset">
+   <property name="icon">
+    <iconset resource="../res/img.qrc">
+     <normaloff>:/img/24/memory-factory-reset.png</normaloff>:/img/24/memory-factory-reset.png</iconset>
+   </property>
+   <property name="text">
+    <string>Firmware Reset...</string>
+   </property>
+   <property name="toolTip">
+    <string>Reset the firmware settings</string>
+   </property>
+  </action>
+  <action name="actionWriteFirmware">
+   <property name="icon">
+    <iconset resource="../res/img.qrc">
+     <normaloff>:/img/48/upload-firmware.png</normaloff>:/img/48/upload-firmware.png</iconset>
+   </property>
+   <property name="text">
+    <string>Write firmware...</string>
+   </property>
+   <property name="toolTip">
+    <string>Write the firmware</string>
+   </property>
+  </action>
+  <action name="actionAboutBoard">
+   <property name="text">
+    <string>About board...</string>
+   </property>
+  </action>
+  <action name="actionMotorMode">
+   <property name="icon">
+    <iconset resource="../res/img.qrc">
+     <normaloff>:/img/32/parameters.png</normaloff>:/img/32/parameters.png</iconset>
+   </property>
+   <property name="text">
+    <string>Motor mode...</string>
+   </property>
+   <property name="toolTip">
+    <string>Show motor mode dialog</string>
+   </property>
+   <property name="shortcut">
+    <string>F10</string>
+   </property>
+  </action>
+  <action name="actionRegistersView">
+   <property name="text">
+    <string>Registers view</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+F1</string>
+   </property>
+  </action>
+  <action name="actionConnect">
+   <property name="icon">
+    <iconset resource="../res/img.qrc">
+     <normaloff>:/img/32/key.png</normaloff>:/img/32/key.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connect...</string>
+   </property>
+   <property name="toolTip">
+    <string>Connect</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset...</string>
+   </property>
+   <property name="toolTip">
+    <string>Reset the board</string>
+   </property>
+  </action>
+  <action name="actionStore">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/img.qrc">
+     <normaloff>:/img/24/memory-set.png</normaloff>:/img/24/memory-set.png</iconset>
+   </property>
+   <property name="text">
+    <string>Store</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QSpeed</class>
+   <extends>QFrame</extends>
+   <header>..widget.qspeed</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QError</class>
+   <extends>QFrame</extends>
+   <header>..widget.qerror</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QTorque</class>
+   <extends>QFrame</extends>
+   <header>..widget.qtorque</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QActionButton</class>
+   <extends>QPushButton</extends>
+   <header>..widget.qactionbutton</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../res/img.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>ProdWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>204</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

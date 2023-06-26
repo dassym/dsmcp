@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WizardProdStartup</class>
+ <widget class="QWizard" name="WizardProdStartup">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>553</width>
+    <height>414</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>DCP Production</string>
+  </property>
+  <property name="options">
+   <set>QWizard::CancelButtonOnLeft</set>
+  </property>
+  <property name="titleFormat">
+   <enum>Qt::MarkdownText</enum>
+  </property>
+  <property name="subTitleFormat">
+   <enum>Qt::MarkdownText</enum>
+  </property>
+  <widget class="QWizarpageSartupCustomer" name="wizardPageCustomer">
+   <property name="title">
+    <string>Customer</string>
+   </property>
+   <property name="subTitle">
+    <string>Select a customer in the list below.</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">0</string>
+   </attribute>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="labelCustomer">
+      <property name="text">
+       <string>Customer</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboBoxCustomer"/>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="labelCustomerLogo">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>160</width>
+        <height>80</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>labelCustomerLogo</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWizarpageSartupBoard" name="wizardPageBoard">
+   <property name="title">
+    <string>Board</string>
+   </property>
+   <property name="subTitle">
+    <string>Select a board in list below.</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">1</string>
+   </attribute>
+   <layout class="QFormLayout" name="formLayout_2">
+    <item row="0" column="0">
+     <widget class="QLabel" name="labelBoard">
+      <property name="text">
+       <string>Board</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboBoxBoard">
+      <property name="placeholderText">
+       <string>Select a board type ...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="labelBoardImage">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>160</width>
+        <height>80</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>labelBoardImage</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWizarpageSartupVariant" name="wizardPageVariant">
+   <property name="title">
+    <string>Board variant</string>
+   </property>
+   <property name="subTitle">
+    <string notr="true">Select a MB-xx board variant in list below.</string>
+   </property>
+   <layout class="QFormLayout" name="formLayout_5">
+    <item row="0" column="0">
+     <widget class="QLabel" name="labelBoardVariant">
+      <property name="text">
+       <string>Variant</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboBoxBoardVariant"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="labelBoardVersion">
+      <property name="text">
+       <string>Version</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="comboBoxBoardVersion"/>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="labelBoardVariantImage">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>160</width>
+        <height>80</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>labelBoardVariantImage</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWizarpageSartupFirmware" name="wizardPageFirmware">
+   <property name="title">
+    <string>Firmware</string>
+   </property>
+   <property name="subTitle">
+    <string notr="true">Select firmware in list below.</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">2</string>
+   </attribute>
+   <layout class="QFormLayout" name="formLayout_3">
+    <item row="0" column="0">
+     <widget class="QLabel" name="labelFirmware">
+      <property name="text">
+       <string>Firmware</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboBoxFirmware"/>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="labelFirmwareDesc">
+      <property name="text">
+       <string>labelFirmwareDesc</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="labelFirmwareIcon">
+      <property name="text">
+       <string>Text *Label*</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::MarkdownText</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWizarpageSartupManufacturing" name="wizardPageManufacturing">
+   <property name="title">
+    <string>Factory data</string>
+   </property>
+   <property name="subTitle">
+    <string notr="true">Enter the manufacturing data.</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">4</string>
+   </attribute>
+   <layout class="QFormLayout" name="formLayout_4">
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_1">
+      <property name="text">
+       <string>Serial number range:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEditSerialNumber">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Format: &lt;span style=&quot; font-size:14pt; font-style:italic;&quot;&gt;x&lt;/span&gt;&lt;span style=&quot; font-size:14pt; color:#cc0000;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-style:italic;&quot;&gt;y&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;/&gt;or &lt;span style=&quot; font-size:14pt; font-style:italic;&quot;&gt;x&lt;/span&gt;&lt;span style=&quot; font-size:14pt; color:#cc0000;&quot;&gt;:&lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-style:italic;&quot;&gt;z&lt;/span&gt;&lt;span style=&quot; font-size:20pt;&quot;/&gt;&lt;/p&gt;&lt;p&gt;Where:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;i&gt;x&lt;/i&gt; is the first serial number&lt;/li&gt;&lt;li&gt;&lt;i&gt;Y&lt;/i&gt; is the last serial number&lt;/li&gt;&lt;li&gt;&lt;i&gt;z&lt;/i&gt; is the number of items&lt;/il&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="placeholderText">
+       <string>SN0000</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Manufacturing order:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="lineEditManufacturingOrder">
+      <property name="toolTip">
+       <string>The manufacturing order reference or &quot;/&quot; if not relevant.</string>
+      </property>
+      <property name="placeholderText">
+       <string>OF-xx-xxxx</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Firmware</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="labelManufacturingFirmware">
+      <property name="text">
+       <string notr="true">-- Firmware --</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Date:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QDateEdit" name="dateEditManufacturingDate">
+      <property name="currentSection">
+       <enum>QDateTimeEdit::DaySection</enum>
+      </property>
+      <property name="displayFormat">
+       <string>dd.MM.yyyy</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWizarpageSartupCustomer</class>
+   <extends>QWizardPage</extends>
+   <header>app.gui.dlg.wzd.prod.pages</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QWizarpageSartupBoard</class>
+   <extends>QWizardPage</extends>
+   <header>app.gui.dlg.wzd.prod.pages</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QWizarpageSartupFirmware</class>
+   <extends>QWizardPage</extends>
+   <header>app.gui.dlg.wzd.prod.pages</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QWizarpageSartupVariant</class>
+   <extends>QWizardPage</extends>
+   <header>app.gui.dlg.wzd.prod.pages</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QWizarpageSartupManufacturing</class>
+   <extends>QWizardPage</extends>
+   <header>app.gui.dlg.wzd.prod.pages</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

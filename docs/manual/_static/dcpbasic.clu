@@ -1,0 +1,56 @@
+usage: dcpbasic.py [-h] [-c CONFIG] [--qt5-options QT5_OPTIONS]
+                   [--cli | --gui] [--lang LANG] [-v | --verbosity VERBOSITY]
+                   [--default-serial DEFAULT_SERIAL]
+                   [--default-host DEFAULT_HOST] [-l LOGLEVEL]
+                   [--log-file LOGFILE] [--log-max-size LOG_MAXBYTES]
+                   [--log-backup-count LOG_BACKUPCOUNT] [-t] [-S [SERIAL] | -H
+                   [HOST]] [--command-mode] [-R] [-D] [-A ACCESS]
+                   [-b BAUDRATE] [--version] [--firm-paths FIRM_PATHS]
+                   [--autorefresh-off | --autorefresh-on]
+
+Application dcp-basic-gui (v0.5.13)
+This application is part of the dsmcp package which provides a family of human-machine interface applications for Dassym electronic boards.
+
+options:
+  -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        Configuration file (.ini)
+  --qt5-options QT5_OPTIONS
+                        Qt5 options
+  --cli                 If present, launches the application without the graphical user interface (default)
+  --gui                 If present, launches the application with the graphical user interface (default:witout GUI)
+  --lang LANG           ISO name of language to use.
+  -v                    Verbosity level (default=none).
+  --verbosity VERBOSITY
+                        Verbosity level (default=0:none).
+  --default-serial DEFAULT_SERIAL
+                        Default serial port.
+  --default-host DEFAULT_HOST
+                        Default host address and port (host:port).
+  -l LOGLEVEL, --log-level LOGLEVEL
+                        Log level {error, warning, debug, info, noset}. (default = info)
+  --log-file LOGFILE    LOG file (default = stderr)
+  --log-max-size LOG_MAXBYTES
+                        Maximum LOG file size in bytes (default=100000).
+  --log-backup-count LOG_BACKUPCOUNT
+                        Number of LOG files retained (default=10).
+  -t, --trace           If present, trace API message exchanges (default = not)
+  -S [SERIAL], --serial [SERIAL]
+                        Serial port for direct control.
+  -H [HOST], --host [HOST]
+                        Host name and port for remote control. (host:port)
+  --command-mode        Sets the preferred DAPI2 mode to 'command'. (Default=command mode)
+  -R, --register-mode   Sets the preferred DAPI2 mode to 'register'. (Default=command mode)
+  -D, --dev-mode        Sets DSMCP execution mode 'development'. (Default=normal mode)
+  -A ACCESS, --access-level ACCESS
+                        Sets the access level for the connection to the board {NO, USER, SERVICE, FACTORY}. (Default=USER)
+  -b BAUDRATE, --baudrate BAUDRATE
+                        Sets the serial port baud rate {115200, 57600, 38400, 19200, 9600}. (default: 115200)
+  --version             Show software version
+  --firm-paths FIRM_PATHS
+                        Search paths for firmware binaries. The different paths are separated by a semicolon (;)
+  --autorefresh-off     Disables auto refresh on start up.
+  --autorefresh-on      Enables auto refresh on start up.
+
+Licence: ©Dassym SA 2022
+         This program is free software under the terms of the GNU General Public License verion 3. 

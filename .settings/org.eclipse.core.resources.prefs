@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//docs/manual/conf.py=utf-8
+encoding//docs/source/conf.py=utf-8
+encoding//src/app/__init__.py=utf-8
+encoding//src/app/gui/basic/ui_basicwindow.py=utf-8
+encoding//src/app/gui/ctrl/ui_ctrlwindow.py=utf-8
+encoding//src/app/gui/dev/ui_devwindow.py=utf-8
+encoding//src/app/gui/dlg/ui_motormodedialog.py=utf-8
+encoding//src/app/gui/dlg/wzd/prod/ui_startup.py=utf-8
+encoding//src/app/gui/prod/ui_prodwindow.py=utf-8
+encoding//src/app/gui/res/img_rc.py=utf-8
+encoding//src/app/i18n/i18n_rc.py=utf-8

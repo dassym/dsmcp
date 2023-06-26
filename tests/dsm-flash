@@ -1,0 +1,102 @@
+#!/bin/bash
+
+# NAME
+#   dsm-flash - Dassym Firmware Flashing Utility
+#
+# SYNOPSIS
+#   dsm-flash [-stune] file
+#
+# COPYRIGHT
+#   dsm-flash is Copyright (C) 2013-2016 by Dassym SA
+#
+# DESCRIPTION
+#   This utility performs the Dassym boards initial firmware flashing.
+#   It is intended for factory or service handling. It works with the
+#   following adapter combinations:
+#   - An ARM-USB-TINY-H (JTAG only) by Olimex
+#   - An ARM-JTAG-SWD over an ARM-USB-TINY-H (JTAG & SWD) by Olimex
+#   - A ST-LINK/V2 (SWD only) by STMicroelectronics
+#
+# OPTIONS
+#   By default, the utility performs a bare metal binary flashing and
+#   verification through JTAG transport over Olimex interface.
+#   The following options apply when in a different environment:
+#
+#   -s
+#       SWD transport over STLink interface
+#
+#   -t
+#       SWD transport over Olimex interface
+#
+#   -j
+#       JTAG transport over J-Link interface
+#
+#   -u
+#       Disable protection clearing
+#
+#   -n
+#       Disable firmware verification
+#
+#   -e
+#       ELF file format
+#
+#   -d
+#       Disable flash erase
+#
+# ARGUMENTS
+#   The utility accepts a full (BIOS & FIRM) Dassym software as an
+#   argument. The utility doesn't check for software compliance with
+#   the processor type or flashing address. If no filename is given,
+#   the utility simply erases the flash space.
+#
+# NOTES
+#   This utility relies upon a functional openocd >= v0.9 installation.
+#
+# SEE ALSO
+#   openocd(1)
+
+# Olimex interface 
+interface='script interface/ftdi/olimex-arm-usb-tiny-h.cfg'
+# JTAG transport
+transport='echo "Default transport"'
+# STM32F1x target
+target='script target/stm32f1x.cfg'
+# Enable protection clearing
+protect='flash protect 0 0 last off'
+# Erase command
+erase='flash erase_sector 0 0 last'
+# Enable firmware verification
+parameter='verify reset exit'
+# Binary firmware address
+address='0x08000000'
+# Parse arguments using getopts
+while getopts stjuned OPT
+do
+  case "$OPT" in
+    s) interface='script interface/stlink-v2.cfg';;
+    t) transport='script interface/ftdi/olimex-arm-jtag-swd.cfg';;
+    j) interface='script interface/jlink.cfg';;
+    u) protect='echo "Protection not cleared"';;
+    n) parameter='reset exit';;
+    e) address='';;
+    d) erase='echo "Flash Erase disabled"';;
+    *) exit 1;;
+  esac
+done
+# Get rid of the processed options
+shift $((OPTIND-1))
+# Remaining argument is filename
+file="$*"
+# Test for filename
+if [ -z "$file" ]; then
+    openocd -c"$interface" -c"$transport" -c"$target" -c"init" -c"reset halt" -c"$protect" -c"$erase" -c"exit"
+    exit 0
+fi
+# Test for file existence
+if [ ! -f "$file" ]; then
+    echo "File doesn't exist"
+    exit 1
+fi
+
+# Openocd invocation
+openocd -c"$interface" -c"$transport" -c"$target" -c"init" -c"reset halt" -c"$protect" -c"$erase" -c"program $file $parameter $address"

@@ -1,0 +1,32 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-18809b81040-343953accadd7027": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "dassym",
+			"save-password": true,
+			"configuration": {
+				"host": "dassym.odoocloud.ch",
+				"port": "5432",
+				"database": "dassym",
+				"url": "jdbc:postgresql://dassym.odoocloud.ch:5432/dassym",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"provider-properties": {},
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
